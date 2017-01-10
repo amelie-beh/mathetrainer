@@ -44,10 +44,10 @@ public class BruchAddition extends JFrame {
 	public BruchAddition() {
 		setVisible(true);
 		setResizable(false);
+		setBounds(0, 0, 600, 300);
 		setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 600, 300);
-		
+				
 		//Panel erzeugen, in dem zwei weitere Panel links und rechts angeordnet sind
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

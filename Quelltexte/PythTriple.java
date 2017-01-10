@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PythTriple {
 	public int rndNumber;
-	public int count = 0;
+
 	
 	public int u;
 	public int v;
@@ -40,8 +40,6 @@ public class PythTriple {
 				X.add(x);
 				Y.add(y);
 				Z.add(z);
-				
-				count++;
 			}
 		}	
 	}

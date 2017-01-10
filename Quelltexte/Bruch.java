@@ -19,6 +19,7 @@ public class Bruch extends JFrame {
 		
 		JPanel ueberschriftPanel = new JPanel();
 		JPanel auswahlPanel = new JPanel();
+		JPanel btnPanel = new JPanel();
 		JButton addBtn = new JButton("+");
 		JButton subBtn = new JButton("-");
 		JButton mulBtn = new JButton("*");
@@ -28,9 +29,12 @@ public class Bruch extends JFrame {
 		
 		add(ueberschriftPanel, BorderLayout.NORTH);
 		add(auswahlPanel, BorderLayout.CENTER);
+		add(btnPanel, BorderLayout.SOUTH);
 		
 		ueberschriftPanel.add(textLabel);
-		ueberschriftPanel.add(zurueckBtn);
+		
+		
+		
 		auswahlPanel.setLayout(new GridLayout(2,2));
 		
 		auswahlPanel.add(addBtn);
@@ -58,6 +62,7 @@ public class Bruch extends JFrame {
 			new BruchDivision();
 		});
 		
+		btnPanel.add(zurueckBtn);
 		zurueckBtn.addActionListener(listener -> {
 			dispose();
 			MainWindow main = new MainWindow();

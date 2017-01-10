@@ -48,8 +48,8 @@ public class ProzentModell {
 		aufgabe = "<html><body>Herr Maier kauft ein T-Shirt"
 				+ "<br>für " + wert + "€"
 				+ "<br>und erhält an der Kasse einen"
-				+ "<br>rabat von "+prozent+"% "
-				+ "<br>wieviel Euro rabat erhält Herr Maier?</body></html>";
+				+ "<br>Rabatt von "+prozent+"% "
+				+ "<br>wieviel Euro Rabatt erhält Herr Maier?</body></html>";
 		
 		newValues();
 		werte.add((double) wert);

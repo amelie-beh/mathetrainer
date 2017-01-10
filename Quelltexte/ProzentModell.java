@@ -12,33 +12,22 @@ public class ProzentModell {
 
 	Random rand = new Random();
 	
-	//Schwierigkeitsgrad1
-	
-
 	DecimalFormat f = new DecimalFormat("#0.00");
 	public int wert;
 	public int prozent;
 	
-
 	ArrayList<String> aufgaben = new ArrayList<String>();
 	ArrayList<Double> prozente = new ArrayList<Double>();
 	ArrayList<Double> werte = new ArrayList<Double>();
 	
 	String aufgabe;
-	
 	String aufgabe1;
-	
-	//= "Herr Bauer benötigt für seinen Garten" + a + "m Maschendrahtzaun und bezahlt dafür"+ wert+"€."
-	//		+ "a) Nachbar Meier braucht" + a + "m vom selben Draht. Wie teuer wird das ?";
 	String aufgabe2;
-
-	
 	
 	public ProzentModell() {
 				
 		newWert();
 		newProzent();
-
 
 	}
 	public int newWert(){
@@ -56,12 +45,21 @@ public class ProzentModell {
 		newValues();
 		werte.add((double) wert);
 		prozente.add((double) prozent);
-		aufgabe = "Herr Maier kauft ein T-Shirt für " + wert + " und erhält an der Kasse einen rabat von "+prozent
-				+ "\n a) wieviel Euro rabat erhält Herr Maier?";
+		aufgabe = "<html><body>Herr Maier kauft ein T-Shirt"
+				+ "<br>für " + wert + "€"
+				+ "<br>und erhält an der Kasse einen"
+				+ "<br>rabat von "+prozent+"% "
+				+ "<br>wieviel Euro rabat erhält Herr Maier?</body></html>";
+		
 		newValues();
 		werte.add((double) wert);
 		prozente.add((double) prozent);
-		aufgabe1 = "Frau Musterfrau kauft eine Handkreissäge für "+ wert +". Zu diesem Nettopreis kommen noch "+prozent+"% Mehrwertsteuer hinzu. Wie viel kostet die Handkreissäge insgesamt?";
+		aufgabe1 = "<html><bod>Frau Musterfrau kauft eine<br> Handkreissäge für "+ wert +"€."
+				+ "<br>Zu diesem Nettopreis kommen noch"
+				+ "<br>" +prozent+"% Mehrwertsteuer hinzu."
+				+ "<br> Wie viel kostet die Handkreissäge insgesamt?";
+		
+		
 		newValues();
 		werte.add((double) wert);
 		prozente.add((double) prozent);

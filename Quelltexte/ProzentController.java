@@ -18,7 +18,6 @@ public class ProzentController {
 	private boolean fifthValue;
 	private boolean sixthValue;
 	
-	//Schwierigkeitsgrad1
 	private int checkValue;
 	private int i = 0;
 	private int wert ;
@@ -34,7 +33,8 @@ public class ProzentController {
 		
 		ShowAufgaben();
 		nextAufgabe();
-		Check();		
+		Check();	
+		Hauptmenü();
 	}
 	
 	
@@ -50,6 +50,17 @@ public class ProzentController {
 		});		
 	}
 	
+	
+	public void Hauptmenü(){
+		view.getReturnbtn().addActionListener(l->{
+				view.dispose();
+				MainWindow main = new MainWindow();
+				main.setVisible(true);
+		});
+		
+	}
+
+	
 	public void nextAufgabe(){
 		checkValue = 0;
 		view.getSubmitbtn().addActionListener(e->{
@@ -63,7 +74,8 @@ public class ProzentController {
 			i +=1;
 			if(i<= modell.aufgaben.size()){
 			view.getErklärung().setText(modell.aufgaben.get(i));
-			} 
+			}
+			view.getSubmitbtn().setEnabled(false);
 		});
 	}
 	
@@ -74,15 +86,11 @@ public class ProzentController {
 				view.getFirstProzentField().setBackground(Color.GREEN);
 				firstValue = true;
 				checkValue++;
-				System.out.println(checkValue);
-				
-				System.out.println(firstValue);
+				CheckValue();
 			}
 			else{
 				view.getFirstProzentField().setBackground(Color.RED);
 				firstValue = false;
-				checkValue--;
-				System.out.println(checkValue);
 			}
 		});
 		
@@ -91,14 +99,11 @@ public class ProzentController {
 				view.getSecondProzentField().setBackground(Color.GREEN);
 				secondValue = true;
 				checkValue++;
-				System.out.println(secondValue);
-				System.out.println(checkValue);
+				CheckValue();
 			}
 			else{
 				view.getSecondProzentField().setBackground(Color.RED);
 				secondValue = false;
-				checkValue--;
-				System.out.println(checkValue);
 			}
 		});
 		
@@ -107,14 +112,11 @@ public class ProzentController {
 				view.getThirdProzentField().setBackground(Color.GREEN);
 				thirdValue = true;
 				checkValue++;
-				System.out.println(thirdValue);
-				System.out.println(checkValue);
+				CheckValue();
 			}
 			else{
 				view.getThirdProzentField().setBackground(Color.RED);
 				thirdValue = false;
-				checkValue--;
-				System.out.println(checkValue);
 			}
 		});
 		
@@ -123,14 +125,12 @@ public class ProzentController {
 				view.getFirstValueField().setBackground(Color.GREEN);
 				fourthValue = true;
 				checkValue++;
-				System.out.println(fourthValue);
-				System.out.println(checkValue);
+				CheckValue();
 			}
 			else{
 				view.getFirstValueField().setBackground(Color.RED);
 				fourthValue = false;
-				checkValue--;
-				System.out.println(checkValue);
+
 			}
 		});
 		
@@ -139,14 +139,12 @@ public class ProzentController {
 				view.getSecondValueField().setBackground(Color.GREEN);
 				fifthValue = true;
 				checkValue++;
-				System.out.println(fifthValue);
-				System.out.println(checkValue);
+				CheckValue();
+
 			}
 			else{
 				view.getSecondValueField().setBackground(Color.RED);
 				fifthValue = false;
-				checkValue--;
-				System.out.println(checkValue);
 			}
 		});
 		view.getThirdValueField().addCaretListener(l->{
@@ -154,24 +152,21 @@ public class ProzentController {
 				view.getThirdValueField().setBackground(Color.GREEN);
 				sixthValue = true;
 				checkValue++;
-				System.out.println(sixthValue);
-				System.out.println(checkValue);
+				CheckValue();
 		}
 			else{
 				view.getThirdValueField().setBackground(Color.RED);
 				sixthValue = false;
-				System.out.println(checkValue);
-			
 			}
 		});	
 		
-		if(checkValue == 6){
+
+	}
+	
+	public void CheckValue(){
+			if(checkValue == 6){
 			view.getSubmitbtn().setEnabled(true);
 		}
-		
-
-
-		
 	}
 	
 	

@@ -17,7 +17,7 @@ public class ProzentModell {
 	public int prozent;
 	
 	ArrayList<String> aufgaben = new ArrayList<String>();
-	ArrayList<Double> prozente = new ArrayList<Double>();
+	ArrayList<Integer> prozente = new ArrayList<Integer>();
 	ArrayList<Double> werte = new ArrayList<Double>();
 	
 	String aufgabe;
@@ -44,16 +44,16 @@ public class ProzentModell {
 	public void addTasks(){
 		newValues();
 		werte.add((double) wert);
-		prozente.add((double) prozent);
+		prozente.add(prozent);
 		aufgabe = "<html><body>Herr Maier kauft ein T-Shirt"
 				+ "<br>für " + wert + "€"
 				+ "<br>und erhält an der Kasse einen"
-				+ "<br>Rabatt von "+prozent+"% "
-				+ "<br>wieviel Euro Rabatt erhält Herr Maier?</body></html>";
+				+ "<br>rabat von "+prozent+"% "
+				+ "<br>wieviel Euro rabat erhält Herr Maier?</body></html>";
 		
 		newValues();
 		werte.add((double) wert);
-		prozente.add((double) prozent);
+		prozente.add(prozent);
 		aufgabe1 = "<html><bod>Frau Musterfrau kauft eine<br> Handkreissäge für "+ wert +"€."
 				+ "<br>Zu diesem Nettopreis kommen noch"
 				+ "<br>" +prozent+"% Mehrwertsteuer hinzu."
@@ -62,7 +62,7 @@ public class ProzentModell {
 		
 		newValues();
 		werte.add((double) wert);
-		prozente.add((double) prozent);
+		prozente.add(prozent);
 		aufgabe2 = "Wieviel sind "+prozent+"% von "+wert;
 		
 		aufgaben.add(aufgabe);
